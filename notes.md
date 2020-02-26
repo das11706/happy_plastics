@@ -10,4 +10,4 @@ User has option to see how plastic is recycled
 Classes
 - Plastic
 - CLI
-- 
+- Scraper
