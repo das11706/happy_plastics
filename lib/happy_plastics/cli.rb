@@ -1,6 +1,7 @@
 class HappyPlastics::CLI 
   def call
     puts "Welcome to HappyPlastics!"
+    puts "Please select a plastic symbol number for more information."
     get_listed_plastics
     get_user_plastic
     # list_plastic_name
