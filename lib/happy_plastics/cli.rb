@@ -1,11 +1,11 @@
 class HappyPlastics::CLI 
   def call
-    puts "Welcome to HappyPlastics!"
-    puts "Our aim is to make a greener world by informing you on the variety of available plastics, their uses, and their recycling potential."
-    puts "Please select a plastic symbol number for more information."
+    puts "\nWelcome to HappyPlastics!\n"
+    puts "\nOur aim is to make a greener world by informing you of the variety of available plastics, their uses, and their recycling potential.\n"
+    puts "\nPlease select a plastic symbol number for more information.\n"
     get_listed_plastics
+    list_plastics
     get_user_plastic
-    # list_plastic_name
   end
   
   def get_listed_plastics
@@ -13,10 +13,13 @@ class HappyPlastics::CLI
     @plastics = ["1", "2", "3", "4", "5", "6", "7"]
   end
 
-  def get_user_plastic
-    # list plastics
+  def list_plastics
     @plastics.each do |month|
       puts "Symbol ##{month}"
     end
+  end
+  
+  def get_user_plastic
+    
   end
 end 
