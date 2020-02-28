@@ -14,7 +14,7 @@ class HappyPlastics::CLI
   def get_user_plastic
     # list plastics
     @plastics.each do |month|
-      puts "#{month}"
+      puts "Symbol ##{month}"
     end
   end
 end 
