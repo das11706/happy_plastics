@@ -2,7 +2,7 @@ class HappyPlastics::CLI
   def call
     puts "\nWelcome to HappyPlastics!\n"
     puts "\nOur aim is to make a greener world by informing you of the variety of available plastics, their uses, and their recycling potential.\n"
-    puts "\nPlease select a plastic symbol number for more information.\n"
+    
     get_listed_plastics
     list_plastics
     get_user_plastic
@@ -14,6 +14,7 @@ class HappyPlastics::CLI
   end
 
   def list_plastics
+    puts "\nPlease select a plastic symbol number for more information.\n"
     @plastics.each do |month|
       puts "Symbol ##{month}"
     end
