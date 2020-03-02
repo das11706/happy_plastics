@@ -29,6 +29,8 @@ class HappyPlastics::CLI
   end
   
   def show_plastic_for(chosen_plastic)
+    plastic = @plastics[chosen_plastic - 1]
+    puts "Here is the name for plastic #{plastic}:"
     binding.pry
   end
 end 
