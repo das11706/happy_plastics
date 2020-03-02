@@ -29,6 +29,6 @@ class HappyPlastics::CLI
   end
   
   def show_plastic_for(chosen_plastic)
-    
+    binding.pry
   end
 end 
