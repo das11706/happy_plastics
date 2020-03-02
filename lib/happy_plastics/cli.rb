@@ -28,6 +28,7 @@ class HappyPlastics::CLI
     end
   end
   
-  def show_plastic_for
+  def show_plastic_for(chosen_plastic)
+    
   end
 end 
