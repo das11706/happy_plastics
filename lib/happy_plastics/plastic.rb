@@ -1,13 +1,19 @@
 class HappyPlastics::Plastic 
-  @@all = [1, 2, 3]
+  @@all = []
   attr_accessor :name 
   
   def initialize(name)
     @name = name
+    # @@all << self
+    save
   defined
   
   def self.all
     @@all
   end
+  
+  def save
+    @@all << self
+  end 
   
 end
