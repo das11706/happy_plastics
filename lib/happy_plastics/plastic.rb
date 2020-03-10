@@ -6,7 +6,7 @@ class HappyPlastics::Plastic
     @name = name
     # @@all << self
     save
-  defined
+  end
   
   def self.all
     @@all

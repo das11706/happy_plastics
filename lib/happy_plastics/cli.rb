@@ -32,7 +32,7 @@ class HappyPlastics::CLI
   
   def show_plastic_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
-    puts "Here is the name for plastic number #{plastic}:"
+    puts "Here is the name for plastic number #{plastic.name}:"
     # binding.pry
     # HappyPlastics::Plastic.all.each.with_index(1) do | plastic |
     #   puts plastic.name
