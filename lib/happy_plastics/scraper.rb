@@ -1,3 +1,3 @@
 class HappyPlastics::Scraper
-   
+     
 end
