@@ -12,6 +12,7 @@ class HappyPlastics::CLI
     # to be scraped instead
     # @plastics = ["1", "2", "3", "4", "5", "6", "7"]
     @plastics = HappyPlastics::Plastic.all
+    # binding.pry
   end
 
   def list_plastics
