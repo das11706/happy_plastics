@@ -1,5 +1,6 @@
 require_relative "./happy_plastics/version"
 require_relative "./happy_plastics/cli"
+require_relative "./happy_plastics/plastic"
 
 require "pry"
 

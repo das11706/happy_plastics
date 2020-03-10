@@ -10,7 +10,8 @@ class HappyPlastics::CLI
   
   def get_listed_plastics
     # to be scraped instead
-    @plastics = ["1", "2", "3", "4", "5", "6", "7"]
+    # @plastics = ["1", "2", "3", "4", "5", "6", "7"]
+    @plastics = HappyPlastics::Plastic.all
   end
 
   def list_plastics
