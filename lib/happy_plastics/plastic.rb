@@ -9,6 +9,7 @@ class HappyPlastics::Plastic
   end
   
   def self.all
+    HappyPlastics::Scraper.scrape_plastics if @@all.empty?
     @@all
   end
   
