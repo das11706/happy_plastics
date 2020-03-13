@@ -5,6 +5,7 @@ require_relative "./happy_plastics/scraper"
 
 require "pry"
 require "nokogiri"
+require "open-uri"
 
 module HappyPlastics
   class Error < StandardError; end
