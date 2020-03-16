@@ -8,8 +8,8 @@ class HappyPlastics::CLI
   @@white="\e[1;37m"
   
   def call
-    puts "\n#{@@brn}Welcome to HappyPlastics!\n#{@@white}"
-    puts "\nOur aim is to make a greener world by informing you of the variety of available plastics, their uses, and their recycling potential.\n"
+    puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
+    puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the variety of available plastics, their uses, and their recycling potential.\n"
     
     get_listed_plastics
     list_plastics
