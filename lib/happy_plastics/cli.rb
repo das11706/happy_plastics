@@ -1,6 +1,14 @@
 class HappyPlastics::CLI 
+  @@red="\e[1;31m"
+  @@grn="\e[1;32m"
+  @@blu="\e[1;34m"
+  @@pur="\e[1;35m"
+  @@cyn="\e[1;36m"
+  @@brn="\e[1;33m"
+  @@white="\e[1;37m"
+  
   def call
-    puts "\nWelcome to HappyPlastics!\n"
+    puts "\n#{@@brn}Welcome to HappyPlastics!\n#{@@white}"
     puts "\nOur aim is to make a greener world by informing you of the variety of available plastics, their uses, and their recycling potential.\n"
     
     get_listed_plastics
