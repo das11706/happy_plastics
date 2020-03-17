@@ -1,9 +1,11 @@
 class HappyPlastics::Plastic 
   @@all = []
-  attr_accessor :name 
+  attr_accessor :name
+  attr_writer :plastics
   
   def initialize(name)
     @name = name
+    @events = []
     # @@all << self
     save
   end
@@ -15,6 +17,11 @@ class HappyPlastics::Plastic
   
   def save
     @@all << self
+  end 
+  
+  def plastics
+    HappyPlastics::Scraper.scrape_plastics if @events.empty?
+    @events
   end 
   
 end
