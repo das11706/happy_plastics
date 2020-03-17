@@ -5,13 +5,13 @@ class HappyPlastics::Plastic
   
   def initialize(name)
     @name = name
-    @events = []
+    @plastics = []
     # @@all << self
     save
   end
   
   def self.all
-    HappyPlastics::Scraper.scrape_plastics if @@all.empty?
+    HappyPlastics::Scraper.scrape_plastic_nums if @@all.empty?
     @@all
   end
   
@@ -20,8 +20,8 @@ class HappyPlastics::Plastic
   end 
   
   def plastics
-    HappyPlastics::Scraper.scrape_plastics if @events.empty?
-    @events
+    HappyPlastics::Scraper.scrape_plastic_names if @plastics.empty?
+    @plastics
   end 
   
 end
