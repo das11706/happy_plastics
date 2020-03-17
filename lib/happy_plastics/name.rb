@@ -1,7 +1,6 @@
-class HappyPlastics::Plastic
+class HappyPlastics::Name
   @@all = []
-  attr_accessor :name
-  attr_writer :plastics
+  attr_accessor :name, :num
   
   def initialize(name)
     @name = name
