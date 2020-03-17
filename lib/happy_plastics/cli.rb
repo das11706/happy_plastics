@@ -18,7 +18,7 @@ class HappyPlastics::CLI
   
   def get_listed_plastics
     # to be scraped instead
-    @plastics = HappyPlastics::Plastic.all
+    @plastics = HappyPlastics::Number.all
     # binding.pry
   end
 
@@ -38,8 +38,9 @@ class HappyPlastics::CLI
   end
   
   def show_plastic_for(chosen_plastic)
-    plastic = @plastics[chosen_plastic - 1]
-    puts "Here is the name for plastic number #{plastic.name}:"
+    plastic_num = @plastics[chosen_plastic - 1]
+    plastic_name = plastic_num.plastics
+    puts "Here is the name for plastic number #{plastic_num.name}:"
     # binding.pry
     # HappyPlastics::Plastic.all.each.with_index(1) do | plastic |
     #   puts plastic.name

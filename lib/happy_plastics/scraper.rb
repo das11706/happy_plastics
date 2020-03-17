@@ -5,7 +5,7 @@ class HappyPlastics::Scraper
       plastics = doc.css("span.listicle-slide-hed-number")
         plastics.each do |p|
           name = p.text
-          HappyPlastics::Plastic.new(name)
+          HappyPlastics::Number.new(name)
         end
       # binding.pry
     end

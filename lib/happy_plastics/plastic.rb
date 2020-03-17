@@ -1,4 +1,4 @@
-class HappyPlastics::Plastic 
+class HappyPlastics::Plastic
   @@all = []
   attr_accessor :name
   attr_writer :plastics
@@ -10,18 +10,7 @@ class HappyPlastics::Plastic
     save
   end
   
-  def self.all
-    HappyPlastics::Scraper.scrape_plastic_nums if @@all.empty?
-    @@all
-  end
-  
   def save
     @@all << self
   end 
-  
-  def plastics
-    HappyPlastics::Scraper.scrape_plastic_names if @plastics.empty?
-    @plastics
-  end 
-  
 end
