@@ -1,11 +1,11 @@
 class HappyPlastics::Name
-  @@all = []
   attr_accessor :name, :num
   
-  def initialize(name)
+   @@all = []
+  
+  def initialize(name, num)
     @name = name
-    @plastics = []
-    # @@all << self
+    @num = num
     save
   end
   
