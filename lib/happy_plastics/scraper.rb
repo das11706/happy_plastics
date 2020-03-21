@@ -10,7 +10,7 @@ class HappyPlastics::Scraper
       # binding.pry
     end
     
-    def self.scape_plastic_names(number)
+    def self.scrape_plastic_names(plastic_num)
       HappyPlastics::Name.new("PET", plastic_num)
       HappyPlastics::Name.new("HDPE", plastic_num)
     end
