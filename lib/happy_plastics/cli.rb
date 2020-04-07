@@ -12,7 +12,7 @@ class HappyPlastics::CLI
     puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the various available plastics, their uses, and their recycling potential.\n"
     
     get_listed_plastics
-    get_listed_plastics
+    list_plastics
     get_user_plastic
   end
   
