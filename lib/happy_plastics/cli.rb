@@ -25,7 +25,7 @@ class HappyPlastics::CLI
   def list_plastics 
     puts "\nPlease select a plastic symbol number for more information.\n"
     @plastics.each do |month|
-      puts "Symbol ##{month.num}"
+      puts "Symbol ##{month.name}"
     end
   end
   
