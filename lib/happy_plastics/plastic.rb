@@ -4,8 +4,8 @@ class HappyPlastics::Plastic
   @@all = []
   
   def initialize(name, num)
-    @name - name
-    @num - num
+    @name = name
+    @num = num
     # notify number about name
     add_to_number
     save
