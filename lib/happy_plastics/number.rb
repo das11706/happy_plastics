@@ -1,11 +1,11 @@
 class HappyPlastics::Number 
-  attr_accessor :name 
-  attr_writer :plastic_name 
+  attr_accessor :num, :plastic_name
+  # attr_writer :plastic_name 
   
   @@all = []
   
-  def initialize(name)
-    @name = name
+  def initialize(num)
+    @num = num
     @plastic_names = []
     save
   end
@@ -16,6 +16,7 @@ class HappyPlastics::Number
   end
   
   def get_names
+    binding.pry
     HappyPlastics::Scraper.scrape_plastic_names(self) if @plastic_names.empty?
   end
   

@@ -25,7 +25,7 @@ class HappyPlastics::CLI
   def list_plastics 
     puts "\nPlease select a plastic symbol number for more information.\n"
     @plastics.each do |month|
-      puts "Symbol ##{month.name}"
+      puts "Symbol ##{month.num}"
     end
   end
   
@@ -46,7 +46,7 @@ class HappyPlastics::CLI
     plastic_num = @plastics[chosen_plastic - 1]
     plastic_num.get_names
     puts "Here is the name for plastic number #{plastic_num.name}"
-    #binding.pry
+    # binding.pry
     # HappyPlastics::Plastic.all.each.with_index(1) do |plastic|
     #   puts plastic.name
     # end
