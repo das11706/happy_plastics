@@ -16,7 +16,7 @@ class HappyPlastics::Number
   end
   
   def get_names
-    binding.pry
+    # binding.pry
     HappyPlastics::Scraper.scrape_plastic_names(self) if @plastic_names.empty?
   end
   
