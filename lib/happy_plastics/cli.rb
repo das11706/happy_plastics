@@ -33,7 +33,8 @@ class HappyPlastics::CLI
     chosen_plastic = gets.strip.to_i 
     # binding.pry 
     if chosen_plastic.to_i <= @plastics.length && chosen_plastic.to_i > 0 
-      show_plastic_for(chosen_plastic) if valid_input(chosen_plastic, @plastics)
+      # show_plastic_for(chosen_plastic) if valid_input(chosen_plastic, @plastics)
+      show_plastic_for(chosen_plastic) 
     end
   end
   
