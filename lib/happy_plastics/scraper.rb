@@ -12,5 +12,6 @@ class HappyPlastics::Scraper
   
   def self.scrape_plastic_names(plastic_num)
     HappyPlastics::Name.new("PET", plastic_num)
+    HappyPlastics::Name.new("HDPE", plastic_num)
   end
 end
