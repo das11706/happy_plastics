@@ -6,18 +6,11 @@ class HappyPlastics::Number
   
   def initialize(num)
     @num = num
-    @plastic_names = []
     save
   end
   
-  def self.all 
-    HappyPlastics::Scraper.scrape_plastic_nums if @@all.empty?
-    @@all
-  end
-  
-  def get_names
-    # binding.pry
-    HappyPlastics::Scraper.scrape_plastic_names(self) if @plastic_names.empty?
+  def self.all
+    @@all 
   end
   
   def save
