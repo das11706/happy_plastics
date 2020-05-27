@@ -4,14 +4,14 @@ class HappyPlastics::Scraper
     # plastics = doc.css("div.listicle-body-content picture")
     plastics = doc.css("span.listicle-slide-hed-number")
       plastics.each do |p|
-        name = p.text 
-        HappyPlastics::Number.new(name) 
+        num = p.text 
+        HappyPlastics::Plastic.new(num) 
       end 
     # binding.pry 
   end 
   
-  def self.scrape_plastic_names(plastic_num)
-    HappyPlastics::Plastic.new("PET", plastic_num)
-    HappyPlastics::Plastic.new("HDPE", plastic_num)
+  def self.scrape_facts(plastic_num)
+    HappyPlastics::Plastic.new("PET")
+    HappyPlastics::Plastic.new("HDPE")
   end
 end

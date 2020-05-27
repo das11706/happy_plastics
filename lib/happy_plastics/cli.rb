@@ -11,21 +11,21 @@ class HappyPlastics::CLI
     puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
     puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the various available plastics, their uses, and their recycling potential.\n"
     
-    get_listed_plastics
+    get_plastics
     list_plastics
     get_user_plastic
   end
   
-  def get_listed_plastics
+  def get_plastics
     # to be scraped instead
-    @plastics = HappyPlastics::Number.all 
+    @plastics = HappyPlastics::Plastic.all 
     # binding.pry 
   end
   
   def list_plastics 
     puts "\nPlease select a plastic symbol number for more information.\n"
-    @plastics.each do |month|
-      puts "Symbol ##{month.num}"
+    @plastics.each do |plastic|
+      puts "Symbol ##{plastic.num}"
     end
   end
   
@@ -34,7 +34,7 @@ class HappyPlastics::CLI
     # binding.pry 
     if chosen_plastic.to_i <= @plastics.length && chosen_plastic.to_i > 0 
       # show_plastic_for(chosen_plastic) if valid_input(chosen_plastic, @plastics)
-      show_plastic_for(chosen_plastic) 
+      show_facts_for(chosen_plastic) 
     end
   end
   
@@ -42,10 +42,10 @@ class HappyPlastics::CLI
     input.to_i <= data.length && input.to_i > 0 
   end
   
-  def show_plastic_for(chosen_plastic)
-    plastic_num = @plastics[chosen_plastic - 1]
-    plastic_num.get_names
-    puts "Here is the name for plastic number #{plastic_num.name}"
+  def show_facts_for(chosen_plastic)
+    plastic = @plastics[chosen_plastic - 1]
+    plastic.get_facts
+    puts "Here is the name for plastic number #{plastic.num}"
     # binding.pry
     # HappyPlastics::Plastic.all.each.with_index(1) do |plastic|
     #   puts plastic.name
