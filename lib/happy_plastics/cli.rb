@@ -45,8 +45,8 @@ class HappyPlastics::CLI
   def show_facts_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     plastic.get_facts
-    puts "Here is the name for #{plastic.num}"
-    binding.pry
+    puts "Here is the name for #{plastic.num}:"
+    # binding.pry
     # HappyPlastics::Plastic.all.each.with_index(1) do |plastic|
     #   puts plastic.name
     # end
