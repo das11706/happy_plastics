@@ -23,7 +23,7 @@ class HappyPlastics::CLI
   end
   
   def list_plastics 
-    puts "\nPlease select a plastic recycling symbol for more information.\n"
+    puts "\nPlease select a plastic recycling number for more information.\n"
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
       puts "#{plastic.num}"
