@@ -9,7 +9,12 @@ class HappyPlastics::CLI
   
   def call 
     puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
-    puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the various available plastics, their uses, and their recycling potential.\n"
+    # puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the various available plastics, their uses, and their recycling potential.\n"
+    
+    # puts "\nMaking the world" + " greener".colorize(:green) + " by empowering you with info.\n"
+    
+    puts "\nWhere plastics come to find purpose and the world becomes" + " greener.".colorize(:green) 
+    
     
     get_plastics
     list_plastics
