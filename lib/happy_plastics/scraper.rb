@@ -21,7 +21,7 @@ class HappyPlastics::Scraper
         # HappyPlastics::Fact.new("HDPE", plastic)
       end
       
-    plastic_found_in = doc.css("span.listicle-slide-")
+    # plastic_found_in = doc.css("span.listicle-slide-")
       # binding.pry
   end
 end

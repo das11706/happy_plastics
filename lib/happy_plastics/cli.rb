@@ -44,18 +44,22 @@ class HappyPlastics::CLI
     end
   end
   
-  def valid_input(input, data)
-    input.to_i <= data.length && input.to_i > 0 
-  end
+  # def valid_input(input, data)
+  #   input.to_i <= data.length && input.to_i > 0 
+  # end
   
   def show_facts_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     plastic.get_facts
     puts "Here is the name for symbol ##{plastic.num}:"
     # binding.pry
-    HappyPlastics::Fact.all.each.with_index(1) do |n|
-      puts n.name
+    # HappyPlastics::Fact.all.each.with_index(1) do |n|
+    #   puts n.name
+    # end
+    HappyPlastics::Fact.all.find do |n|
+       puts chosen_plastic
     end
+    # binding.pry
     # get_user_plastic
   end
 end
