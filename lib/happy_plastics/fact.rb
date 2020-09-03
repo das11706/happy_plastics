@@ -1,12 +1,13 @@
 class HappyPlastics::Fact
-  attr_accessor :name, :plastic, :key_info
+  attr_accessor :name, :plastic, :num, :key_info
   @@all = []
   
   def initialize(name, plastic)
     @name = name
     @plastic = plastic
+    # @num = num
     # notify plastic about the fact
-    add_to_plastic
+    # add_to_plastic
     save
   end
   
@@ -19,9 +20,9 @@ class HappyPlastics::Fact
   #   HappyPlastics::Scraper.scrape_facts(self) if @facts.empty?
   # end
   
-  def add_to_plastic
-    @plastic.facts << self 
-  end
+  # def add_to_plastic
+  #   @plastic.facts << self 
+  # end
   
   def save
     @@all << self

@@ -57,7 +57,7 @@ class HappyPlastics::CLI
     #   puts n.name
     # end
     HappyPlastics::Fact.all.find do |n|
-       puts chosen_plastic
+       puts n.name 
     end
     # binding.pry
     # get_user_plastic
