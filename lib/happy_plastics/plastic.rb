@@ -1,12 +1,12 @@
 class HappyPlastics::Plastic
-  attr_accessor :name, :facts
+  attr_accessor :num, :name
   
   @@all = []
   
   def initialize(num, name)
     @num = num
     @name = name
-    @facts = []
+    # @facts = []
     save
   end
   
