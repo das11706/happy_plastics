@@ -16,9 +16,9 @@ class HappyPlastics::Scraper
     plastic_name = doc.css("div.listicle-body-content div")
     # plastic_name = doc.css("span.listicle-slide-hed-text")
       plastic_name.each do |n|
-        name = n.text
-        binding.pry
+        name = n.css("span.listicle-slide-hed-text").text
         HappyPlastics::Plastic.new(name)
+        binding.pry
         # HappyPlastics::Fact.new(name, plastic)
         # HappyPlastics::Fact.new("HDPE", plastic)
       end

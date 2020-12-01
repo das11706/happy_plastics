@@ -32,7 +32,7 @@ class HappyPlastics::CLI
     puts "\nPlease select a plastic recycling number for more information.\n"
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
-      puts "#{plastic.num}"
+      puts "#{plastic.name}"
     end
   end
   
