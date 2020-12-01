@@ -3,7 +3,8 @@ class HappyPlastics::Plastic
   
   @@all = []
   
-  def initialize(name)
+  def initialize(num, name)
+    @num = num
     @name = name
     @facts = []
     save
