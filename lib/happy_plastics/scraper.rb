@@ -11,7 +11,7 @@ class HappyPlastics::Scraper
     # binding.pry 
   end 
   
-  def self.scrape_facts(plastic)
+  def self.scrape_name(plastic)
     doc = Nokogiri::HTML(open("https://www.goodhousekeeping.com/home/g804/recycling-symbols-plastics-460321/"))
     plastic_name = doc.css("div.listicle-body-content div")
     # plastic_name = doc.css("span.listicle-slide-hed-text")
