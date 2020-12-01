@@ -8,6 +8,7 @@ require "pry"
 require "nokogiri"
 require "open-uri"
 require "colorize"
+# require 'colorize', '~> 0.8.1'
 
 module HappyPlastics
   class Error < StandardError; end

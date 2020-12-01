@@ -1,14 +1,15 @@
 class HappyPlastics::CLI 
-  @@red="\e[1;31m"
-  @@grn="\e[1;32m"
-  @@blu="\e[1;34m"
-  @@pur="\e[1;35m"
-  @@cyn="\e[1;36m"
-  @@brn="\e[1;33m"
-  @@white="\e[1;37m"
+  # @@red="\e[1;31m"
+  # @@grn="\e[1;32m"
+  # @@blu="\e[1;34m"
+  # @@pur="\e[1;35m"
+  # @@cyn="\e[1;36m"
+  # @@brn="\e[1;33m"
+  # @@white="\e[1;37m"
   
   def call 
-    puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
+    # puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
+    puts "\nWelcome to HappyPlastics!\n".colorize(:light_blue)
     # puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the various available plastics, their uses, and their recycling potential.\n"
     
     # puts "\nMaking the world" + " greener".colorize(:green) + " by empowering you with info.\n"

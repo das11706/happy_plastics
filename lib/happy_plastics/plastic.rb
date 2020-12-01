@@ -15,8 +15,8 @@ class HappyPlastics::Plastic
   end
   
   def get_facts
-    # binding.pry
     HappyPlastics::Scraper.scrape_facts(self) if @facts.empty?
+    # binding.pry
   end
   
   def save 
