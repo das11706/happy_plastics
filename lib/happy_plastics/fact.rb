@@ -15,10 +15,10 @@ class HappyPlastics::Fact
     @@all
   end
   
-  # def get_facts
-  #   # binding.pry
-  #   HappyPlastics::Scraper.scrape_facts(self) if @facts.empty?
-  # end
+  def get_facts
+    # binding.pry
+    HappyPlastics::Scraper.scrape_facts(self) if @facts.empty?
+  end
   
   def add_to_plastic
     @plastic.facts << self 
