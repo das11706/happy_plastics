@@ -52,7 +52,7 @@ class HappyPlastics::CLI
   def show_facts_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     plastic.get_facts
-    puts "Here is the name for symbol ##{plastic.num}:"
+    puts "Here is the name for symbol ##{plastic}:"
     # binding.pry
     # HappyPlastics::Fact.all.each.with_index(1) do |n|
     #   puts n.name

@@ -5,7 +5,7 @@ class HappyPlastics::Plastic
   
   def initialize(name)
     @name = name
-    # @facts = []
+    @facts = []
     save
   end
   
