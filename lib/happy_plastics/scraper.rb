@@ -1,9 +1,9 @@
 class HappyPlastics::Scraper 
   def self.scrape_plastic_num
      doc = Nokogiri::HTML(open("https://www.goodhousekeeping.com/home/g804/recycling-symbols-plastics-460321/"))
-        plastics = doc.css("div.listicle-body-content picture")
+        # plastics = doc.css("div.listicle-body-content picture")
     # plastic_facts = doc.css("div.listicle-body-content")
-    # plastics = doc.css("span.listicle-slide-hed-number")
+    plastics = doc.css("span.listicle-slide-hed-number")
       plastics.each do |p|
         num = p.text 
         HappyPlastics::Plastic.new(num) 
