@@ -32,7 +32,7 @@ class HappyPlastics::CLI
     puts "\nPlease select a plastic recycling number for more information.\n"
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
-      puts "#{plastic.name}"
+      puts "#{plastic.num}"
     end
   end
   
@@ -52,7 +52,7 @@ class HappyPlastics::CLI
   def show_facts_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     plastic.get_facts
-    puts "Here is the name for symbol ##{plastic}:"
+    puts "Here is the name for symbol ##{plastic.num}:"
     # binding.pry
     # HappyPlastics::Fact.all.each.with_index(1) do |n|
     #   puts n.name

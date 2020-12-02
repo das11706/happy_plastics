@@ -2,10 +2,9 @@ class HappyPlastics::Fact
   attr_accessor :name, :plastic, :num, :key_info
   @@all = []
   
-  def initialize(num, plastic)
-    # @name = name
+  def initialize(name, plastic)
+    @name = name
     @plastic = plastic
-    @num = num
     # notify plastic about the fact
     add_to_plastic
     save
