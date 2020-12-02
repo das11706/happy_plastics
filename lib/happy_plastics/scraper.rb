@@ -30,7 +30,8 @@ class HappyPlastics::Scraper
       # end
       plastics.each do |p|
         num = p.text 
-        HappyPlastics::Plastic.new(num) 
+        # HappyPlastics::Plastic.new(num) 
+        
       end 
       
     # plastic_found_in = doc.css("span.listicle-slide-")

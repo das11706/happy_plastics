@@ -1,5 +1,5 @@
 class HappyPlastics::Plastic
-  attr_accessor :name
+  attr_accessor :name, :facts
   
   @@all = []
   
