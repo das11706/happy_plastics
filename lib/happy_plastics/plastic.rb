@@ -1,17 +1,16 @@
 class HappyPlastics::Plastic
-  attr_accessor :num, :name
+  attr_accessor :name
   
   @@all = []
   
-  def initialize(num, name)
-    @num = num
+  def initialize(name)
     @name = name
     # @facts = []
     save
   end
   
   def self.all 
-    HappyPlastics::Scraper.scrape_plastic_nums if @@all.empty?
+    HappyPlastics::Scraper.scrape_plastic_name if @@all.empty?
     @@all
   end
   
