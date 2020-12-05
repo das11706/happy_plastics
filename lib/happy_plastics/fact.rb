@@ -1,5 +1,5 @@
 class HappyPlastics::Fact
-  attr_accessor :name, :plastic, :num, :key_info
+  attr_accessor :name, :plastic
   @@all = []
   
   def initialize(name, plastic)
@@ -13,11 +13,6 @@ class HappyPlastics::Fact
   def self.all
     @@all
   end
-  
-  # def get_facts
-  #   # binding.pry
-  #   HappyPlastics::Scraper.scrape_facts(self) if @facts.empty?
-  # end
   
   def add_to_plastic
     @plastic.facts << self 

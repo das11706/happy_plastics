@@ -16,7 +16,6 @@ class HappyPlastics::CLI
     
     puts "\nWhere plastics come to find purpose and the world becomes" + " greener.".colorize(:green) 
     
-    
     get_plastics
     list_plastics
     get_user_plastic
