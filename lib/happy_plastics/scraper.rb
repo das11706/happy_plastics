@@ -15,7 +15,7 @@ class HappyPlastics::Scraper
         # binding.pry
       end
       HappyPlastics::Plastic.new(@num, @name) 
-      binding.pry
+      # binding.pry
   end 
   
   # def self.scrape_fact(plastic)
