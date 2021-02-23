@@ -50,19 +50,10 @@ class HappyPlastics::CLI
   
   def show_name_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
+    # binding.pry
     # plastic.get_facts
     puts "Here is the name for symbol ##{plastic.num}:"
-    # binding.pry
-    # HappyPlastics::Fact.all.each.with_index(1) do |n|
-    #   puts n.name
-    # end
-    # HappyPlastics::Plastic.all.find do |n|
-    #   puts n.name 
-    # end
-    HappyPlastics::Plastic.all.select do |n| 
-      puts n.name 
-    end
-    # binding.pry
+    puts "#{plastic.name}"
   end
 end
 
