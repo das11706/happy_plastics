@@ -1,12 +1,4 @@
 class HappyPlastics::CLI 
-  # @@red="\e[1;31m"
-  # @@grn="\e[1;32m"
-  # @@blu="\e[1;34m"
-  # @@pur="\e[1;35m"
-  # @@cyn="\e[1;36m"
-  # @@brn="\e[1;33m"
-  # @@white="\e[1;37m"
-  
   def call 
     # puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
     puts "\nWelcome to HappyPlastics!\n".colorize(:yellow)
@@ -28,7 +20,7 @@ class HappyPlastics::CLI
   end
   
   def list_plastics 
-    puts "\nPlease select a plastic recycling number for more information.\n"
+    puts "\nPlease select a plastic recycling number for more information or type 'exit' to end.\n"
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
       puts "#{plastic.num}"
@@ -54,6 +46,8 @@ class HappyPlastics::CLI
     # plastic.get_facts
     puts "Here is the name for symbol ##{plastic.num}:"
     puts "#{plastic.name}"
+    list_plastics
+    get_user_plastic
   end
 end
 
