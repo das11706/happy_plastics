@@ -47,8 +47,8 @@ class HappyPlastics::CLI
     # plastic.get_facts
     puts "Here is the name for symbol ##{plastic.num}:"
     puts "#{plastic.name}"
-    # list_plastics
-    # get_user_plastic
+    list_plastics
+    get_user_plastic
   end
 end
 
