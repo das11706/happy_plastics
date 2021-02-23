@@ -20,7 +20,8 @@ class HappyPlastics::CLI
   end
   
   def list_plastics 
-    puts "\nPlease select a plastic recycling number for more information or type 'exit' to end.\n"
+    puts "\nSelect a plastic recycling number to learn the official name of the plastic.\n"
+    puts "Type 'more' for additional information on your selection or type 'exit' to end."
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
       puts "#{plastic.num}"
@@ -46,8 +47,8 @@ class HappyPlastics::CLI
     # plastic.get_facts
     puts "Here is the name for symbol ##{plastic.num}:"
     puts "#{plastic.name}"
-    list_plastics
-    get_user_plastic
+    # list_plastics
+    # get_user_plastic
   end
 end
 
