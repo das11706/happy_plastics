@@ -14,7 +14,7 @@ class HappyPlastics::CLI
     
     # puts "\nMaking the world" + " greener".colorize(:green) + " by empowering you with info.\n"
     
-    puts "\nWhere plastics come to find purpose and the world becomes" + " greener.".colorize(:green) 
+    puts "Where plastics come to find purpose and the world becomes" + " greener.".colorize(:green) 
     
     get_plastics
     list_plastics
