@@ -56,11 +56,13 @@ class HappyPlastics::CLI
     # HappyPlastics::Fact.all.each.with_index(1) do |n|
     #   puts n.name
     # end
-    HappyPlastics::Plastic.all.find do |n|
-       puts n.name 
+    # HappyPlastics::Plastic.all.find do |n|
+    #   puts n.name 
+    # end
+    HappyPlastics::Plastic.all.select do |n| 
+      puts n.name 
     end
     # binding.pry
-    # get_user_plastic
   end
 end
 
