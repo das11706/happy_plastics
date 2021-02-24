@@ -1,22 +1,24 @@
 class HappyPlastics::Fact
-  attr_accessor :name, :plastic
+  attr_accessor :info, :plastic
   @@all = []
   
-  def initialize(name, plastic)
-    @name = name
+  def initialize(info, plastic)
+    @info = info
     @plastic = plastic
     # notify plastic about the fact
-    add_to_plastic
+    # add_to_plastic
     save
   end
   
   def self.all
+    HappyPlastics::Scraper.scrape_fact if @@all.empty?
     @@all
+    # binding.pry
   end
   
-  def add_to_plastic
-    @plastic.facts << self 
-  end
+  # def add_to_plastic
+  #   @plastic.facts << self 
+  # end
   
   def save
     @@all << self
