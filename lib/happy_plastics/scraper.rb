@@ -11,12 +11,12 @@ class HappyPlastics::Scraper
       end
   end 
   
-  def self.scrape_fact
+  def self.scrape_fact(plastic)
     doc = Nokogiri::HTML(open("https://www.goodhousekeeping.com/home/g804/recycling-symbols-plastics-460321/"))
       plastic_facts = doc.css("div.listicle-slide-dek p")
       plastic_facts.each do |f|
       fact = f.text
-      HappyPlastics::Fact.new(fact)
+      HappyPlastics::Fact.new(fact, plastic)
       # binding.pry
     end
   end

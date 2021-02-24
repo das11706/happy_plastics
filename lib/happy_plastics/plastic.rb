@@ -15,6 +15,10 @@ class HappyPlastics::Plastic
     @@all
   end
   
+  def get_facts
+    HappyPlastics::Scraper.scrape_fact(self) if @facts.empty?
+  end
+  
   def save 
     @@all << self 
   end
