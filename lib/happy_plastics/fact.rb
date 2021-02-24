@@ -8,12 +8,17 @@ class HappyPlastics::Fact
     # notify plastic about the fact
     add_to_plastic
     save
+    # binding.pry
   end
   
+  # def self.all
+  #   HappyPlastics::Scraper.scrape_fact if @@all.empty?
+  #   @@all
+  #   # binding.pry
+  # end
+  
   def self.all
-    HappyPlastics::Scraper.scrape_fact if @@all.empty?
     @@all
-    # binding.pry
   end
   
   def add_to_plastic
