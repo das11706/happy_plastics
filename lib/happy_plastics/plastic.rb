@@ -1,5 +1,5 @@
 class HappyPlastics::Plastic
-  attr_accessor :num, :name
+  attr_accessor :num, :name, :facts
   
   @@all = []
   
@@ -15,8 +15,9 @@ class HappyPlastics::Plastic
     @@all
   end
   
-  def get_facts
+  def get_fact
     HappyPlastics::Scraper.scrape_fact(self) if @facts.empty?
+    # binding.pry
   end
   
   def save 
