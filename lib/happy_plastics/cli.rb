@@ -39,7 +39,7 @@ class HappyPlastics::CLI
     if chosen_plastic.to_i <= @plastics.length && chosen_plastic.to_i > 0 
       # show_plastic_for(chosen_plastic) if valid_input(chosen_plastic, @plastics)
       show_name_for(chosen_plastic) 
-      show_fact_for(chosen_plastic)
+      # show_fact_for(chosen_plastic)
     end
   end
   
@@ -60,8 +60,18 @@ class HappyPlastics::CLI
     # binding.pry
     puts "Here is the name for plastic symbol ##{plastic.num}:"
     puts "#{plastic.name}"
-    list_plastics
-    get_user_plastic
+    puts "\nType 'info' if you would like some facts on your selection or type 'exit!' to end."
+      info = gets.strip
+      if info == 'info'
+        show_fact_for(chosen_plastic)
+      # elsif info == 'exit'
+      elsif info == 'continue'
+      puts "\n Type 'continue' to select again or 'exit' to end."
+      # continue = gets.strip
+      if continue == 'continue'
+        list_plastics
+        get_user_plastic
+      end
     # get_user_plastic_fact
   end
   
@@ -70,8 +80,12 @@ class HappyPlastics::CLI
     plastic.get_fact
     # binding.pry
     puts "Here are the facts for plastic symbol ##{plastic.num}:"
-    plastic.facts.each.with_index(1) do |fact, idx|
-      puts "#{idx}, #{fact.info}"
+    # plastic.facts.each.with_index(1) do |fact, idx|
+    #   puts "#{idx}, #{fact.info}"
+    # end
+    plastic.facts.each do |fact|
+      puts "#{fact.info}"
+      # binding.pry
     end
   end
     
