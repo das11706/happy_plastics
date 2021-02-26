@@ -60,18 +60,19 @@ class HappyPlastics::CLI
     # binding.pry
     puts "Here is the name for plastic symbol ##{plastic.num}:"
     puts "#{plastic.name}"
-    puts "\nType 'info' if you would like some facts on your selection or type 'exit!' to end."
+    puts "\nType 'info' if you would like some facts on your selection or type 'exit' to end.\n"
       info = gets.strip
       if info == 'info'
         show_fact_for(chosen_plastic)
-      # elsif info == 'exit'
-      elsif info == 'continue'
-      puts "\n Type 'continue' to select again or 'exit' to end."
-      # continue = gets.strip
-      if continue == 'continue'
+        puts "\n Type 'continue' to select again or 'exit' to end.\n"    
+        continue = gets.strip
+        if continue == 'continue' 
         list_plastics
         get_user_plastic
+        end
       end
+      # continue = gets.strip
+      # if continue == 'continue'
     # get_user_plastic_fact
   end
   
