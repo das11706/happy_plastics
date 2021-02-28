@@ -21,7 +21,9 @@ class HappyPlastics::CLI
   end
   
   def get_facts
-    @facts = HappyPlastics::Plastic.all
+    # @facts = HappyPlastics::Plastic.all
+    # @facts = HappyPlastics::Plastic.get_fact
+    @facts = HappyPlastics::Fact.all
       # binding.pry
   end
   
