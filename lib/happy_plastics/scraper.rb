@@ -19,8 +19,8 @@ class HappyPlastics::Scraper
       # binding.pry
       plastic_facts.select do |f|
       fact = f.text
-      HappyPlastics::Fact.new(fact, plastic)
-      # HappyPlastics::Fact.new(fact)
+      # HappyPlastics::Fact.new(fact, plastic)
+      HappyPlastics::Fact.new(fact)
       # binding.pry
     end
   end
