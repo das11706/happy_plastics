@@ -16,11 +16,17 @@ class HappyPlastics::Plastic
     # binding.pry
   end
   
-  # def get_fact
+  # def facts
   #   HappyPlastics::Scraper.scrape_fact(self) if @facts.empty?
   #   @facts
   #   # binding.pry
   # end
+  
+  def get_fact
+    HappyPlastics::Scraper.scrape_fact(self) if @facts.empty?
+    # @facts
+    # binding.pry
+  end
   
   def save 
     @@all << self 
