@@ -31,7 +31,7 @@ class HappyPlastics::CLI
   # end
   
   def list_plastics 
-    puts "\nSelect a plastic recycling number to learn the name of the plastic or type 'exit' to end.\n"
+    puts "\nSelect a plastic recycling number to learn the acronym of the plastic or type 'exit' to end.\n"
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
       puts "#{plastic.num}"
@@ -63,7 +63,7 @@ class HappyPlastics::CLI
   def show_name_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     # binding.pry
-    puts "Here is the name for plastic symbol ##{plastic.num}:"
+    puts "Here is the acronym for plastic number ##{plastic.num}:"
     puts "#{plastic.name}"
     puts "\nType 'info' if you would like facts on your selection or type 'exit' to end.\n"
       info = gets.strip
