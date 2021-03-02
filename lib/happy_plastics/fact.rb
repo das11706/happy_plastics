@@ -31,5 +31,6 @@ class HappyPlastics::Fact
   
   def save
     @@all << self
+    # binding.pry
   end
 end

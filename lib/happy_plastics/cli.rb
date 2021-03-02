@@ -65,7 +65,7 @@ class HappyPlastics::CLI
     # binding.pry
     puts "Here is the name for plastic symbol ##{plastic.num}:"
     puts "#{plastic.name}"
-    puts "\nType 'info' if you would like some facts on your selection or type 'exit' to end.\n"
+    puts "\nType 'info' if you would like facts on your selection or type 'exit' to end.\n"
       info = gets.strip
       if info == 'info'
         show_fact_for(chosen_plastic)
@@ -91,8 +91,8 @@ class HappyPlastics::CLI
     # end
     plastic.facts.each do |fact|
       puts "#{fact.info}"
-      # binding.pry
     end
+    # binding.pry
   end
 
 end
