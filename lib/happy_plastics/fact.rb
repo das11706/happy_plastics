@@ -26,7 +26,7 @@ class HappyPlastics::Fact
   def add_to_plastic
     # @plastic.facts << self 
     HappyPlastics::Plastic.new(@num, @name).facts << self
-    binding.pry
+    # binding.pry
   end
   
   def save
