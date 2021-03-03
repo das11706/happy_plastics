@@ -25,14 +25,9 @@ class HappyPlastics::CLI
     chosen_plastic = gets.strip.to_i 
     # binding.pry 
     if chosen_plastic.to_i <= @plastics.length && chosen_plastic.to_i > 0 
-      # show_plastic_for(chosen_plastic) if valid_input(chosen_plastic, @plastics)
       show_name_for(chosen_plastic) 
     end
   end
-  
-  # def valid_input(input, data)
-  #   input.to_i <= data.length && input.to_i > 0 
-  # end
   
   def show_name_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
