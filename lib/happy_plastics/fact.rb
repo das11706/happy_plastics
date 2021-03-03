@@ -1,12 +1,12 @@
 class HappyPlastics::Fact
-  # attr_accessor :info, :plastic
-  attr_accessor :info
+  attr_accessor :info, :plastic
+  # attr_accessor :info
   @@all = []
   
-  # def initialize(info, plastic)
-  def initialize(info)
+  def initialize(info, plastic)
+  # def initialize(info)
     @info = info
-    # @plastic = plastic
+    @plastic = plastic
     # notify plastic about the fact
     add_to_plastic
     save
@@ -24,8 +24,8 @@ class HappyPlastics::Fact
   end
   
   def add_to_plastic
-    # @plastic.facts << self 
-    HappyPlastics::Plastic.new(@num, @name).facts << self
+    @plastic.facts << self 
+    # HappyPlastics::Plastic.new(@num, @name).facts << self
     # binding.pry
   end
   
