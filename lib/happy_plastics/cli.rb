@@ -1,15 +1,9 @@
 class HappyPlastics::CLI 
   def call 
-    # puts "\n#{@@brn}Welcome to HappyPlastics!#{@@white}\n"
     puts "\nWelcome to HappyPlastics!\n".colorize(:yellow)
-    # puts "\nOur aim is to make a " + "greener world".colorize(:green) + " by informing you of the various available plastics, their uses, and their recycling potential.\n"
-    
-    # puts "\nMaking the world" + " greener".colorize(:green) + " by empowering you with info.\n"
-    
     puts "Where you learn about plastics and the world becomes" + " greener.".colorize(:green) 
     
     get_plastics
-    # get_facts
     list_plastics
     get_user_plastic
   end
@@ -48,14 +42,6 @@ class HappyPlastics::CLI
     end
   end
   
-  # def get_user_plastic_fact
-  #   chosen_plastic = gets.strip.to_i
-  #   if chosen_plastic.to_i <= @plastics.length && chosen_plastic.to_i > 0 
-  #     # show_plastic_for(chosen_plastic) if valid_input(chosen_plastic, @plastics)
-  #     show_fact_for(chosen_plastic)
-  #   end
-  # end
-  
   # def valid_input(input, data)
   #   input.to_i <= data.length && input.to_i > 0 
   # end
@@ -83,9 +69,6 @@ class HappyPlastics::CLI
   
   def show_fact_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
-    # plastic.get_fact
-    # binding.pry
-    
     fact = plastic.get_fact
     puts "Here are the facts for plastic symbol ##{plastic.num}:
     #{fact.info}"
