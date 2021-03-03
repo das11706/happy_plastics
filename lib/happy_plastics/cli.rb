@@ -1,7 +1,7 @@
 class HappyPlastics::CLI 
   def call 
     puts "\nWelcome to HappyPlastics!\n".colorize(:yellow)
-    puts "Where you learn about plastics and the world becomes" + " greener.".colorize(:green) 
+    puts "Where you learn about plastics and the world becomes".colorize(:yellow) + " greener.".colorize(:green) 
     get_plastics
     list_plastics
     get_user_plastic
@@ -14,7 +14,7 @@ class HappyPlastics::CLI
   end
   
   def list_plastics 
-    puts "\nSelect a plastic recycling number to learn the acronym of the plastic or type 'exit' to end.\n"
+    puts "\nSelect a plastic recycling number to learn the acronym of the plastic or type 'exit' to end.\n".colorize(:yellow)
     # @plastics.each do |plastic|
     get_plastics.each do |plastic|
       puts "#{plastic.num}"
@@ -37,13 +37,13 @@ class HappyPlastics::CLI
   def show_name_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     # binding.pry
-    puts "Here is the acronym for plastic number ##{plastic.num}:"
+    puts "Here is the acronym for plastic number ##{plastic.num}:".colorize(:yellow)
     puts "#{plastic.name}"
-    puts "\nType 'info' if you would like facts on your selection or type 'exit' to end.\n"
+    puts "\nType 'info' if you would like facts on your selection or type 'exit' to end.\n".colorize(:yellow)
       info = gets.strip
       if info == 'info'
         show_fact_for(chosen_plastic)
-        puts "\n Type 'continue' to select again or 'exit' to end.\n"    
+        puts "\n Type 'continue' to select again or 'exit' to end.\n".colorize(:yellow)   
         continue = gets.strip
         if continue == 'continue' 
         list_plastics
@@ -55,8 +55,8 @@ class HappyPlastics::CLI
   def show_fact_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
     fact = plastic.get_fact
-    puts "Here are the facts for plastic symbol ##{plastic.num}:
-    #{fact.info}"
+    puts "Here are the facts for plastic symbol ##{plastic.num}:".colorize(:yellow) +
+    "#{fact.info}".colorize(:light_blue)
   end
 end
 
