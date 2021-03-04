@@ -4,6 +4,8 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 TODO: Delete this and the text above, and describe your gem
 
+The purpose of this gem is to educate the user on the various types of plastic used in everyday life. The user will be able to select a plastic type and then choose to learn more information about that selection. The user will then have the opportunity to continue to make new selections or exit the program.
+
 ## Installation
 
 Add this line to your application's Gemfile:
