@@ -10,7 +10,6 @@ class HappyPlastics::Fact
     # notify plastic about the fact
     add_to_plastic
     save
-    # binding.pry
   end
   
   def self.all
@@ -20,11 +19,9 @@ class HappyPlastics::Fact
   def add_to_plastic
     @plastic.facts << self 
     # HappyPlastics::Plastic.new(@num, @name).facts << self
-    # binding.pry
   end
   
   def save
     @@all << self
-    # binding.pry
   end
 end

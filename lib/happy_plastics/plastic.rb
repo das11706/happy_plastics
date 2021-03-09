@@ -13,12 +13,10 @@ class HappyPlastics::Plastic
   def self.all 
     HappyPlastics::Scraper.scrape_plastic if @@all.empty?
     @@all
-    # binding.pry
   end
   
   def get_fact
     HappyPlastics::Scraper.scrape_fact(self) 
-    # binding.pry
   end
   
   def save 

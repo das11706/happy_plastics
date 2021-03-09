@@ -8,22 +8,18 @@ class HappyPlastics::CLI
   end
   
   def get_plastics
-    # to be scraped instead
     @plastics = HappyPlastics::Plastic.all 
-    # binding.pry 
   end
   
   def list_plastics 
     puts "\nSelect a plastic recycling number to learn the acronym of the plastic or type 'exit' to end.\n".colorize(:yellow)
-    # @plastics.each do |plastic|
     get_plastics.each do |plastic|
-      puts "#{plastic.num}"
+    puts "#{plastic.num}"
     end
   end
   
   def get_user_plastic
     chosen_plastic = gets.strip.to_i 
-    # binding.pry 
     if chosen_plastic.to_i <= @plastics.length && chosen_plastic.to_i > 0 
       show_name_for(chosen_plastic) 
     end
@@ -31,7 +27,6 @@ class HappyPlastics::CLI
   
   def show_name_for(chosen_plastic)
     plastic = @plastics[chosen_plastic - 1]
-    # binding.pry
     puts "Here is the acronym for plastic number ##{plastic.num}:".colorize(:yellow)
     puts "#{plastic.name}"
     puts "\nType 'info' if you would like facts on your selection or type 'exit' to end.\n".colorize(:yellow)
