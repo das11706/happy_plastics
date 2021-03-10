@@ -1,13 +1,10 @@
 class HappyPlastics::Fact
   attr_accessor :info, :plastic
-  # attr_accessor :info
   @@all = []
   
   def initialize(info, plastic)
-  # def initialize(info)
     @info = info
     @plastic = plastic
-    # notify plastic about the fact
     add_to_plastic
     save
   end
@@ -18,7 +15,6 @@ class HappyPlastics::Fact
   
   def add_to_plastic
     @plastic.facts << self 
-    # HappyPlastics::Plastic.new(@num, @name).facts << self
   end
   
   def save
