@@ -1,5 +1,5 @@
 class HappyPlastics::Fact
-  attr_accessor :info, :plastic
+  attr_accessor :info
   @@all = []
   
   def initialize(info, plastic)
