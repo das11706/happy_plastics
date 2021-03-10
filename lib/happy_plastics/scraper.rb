@@ -3,9 +3,9 @@ class HappyPlastics::Scraper
     doc = Nokogiri::HTML(open("https://www.goodhousekeeping.com/home/g804/recycling-symbols-plastics-460321/"))
     @plastic_nums = doc.css("span.listicle-slide-hed-number")
     @plastic_names = doc.css("span.listicle-slide-hed-text")
-    @plastic_nums.zip(@plastic_names).each do |num, nam|
+    @plastic_nums.zip(@plastic_names).each do |num, name|
        number = num.text 
-       name = nam.text
+       name = name.text
        HappyPlastics::Plastic.new(number, name)
     end
   end 
