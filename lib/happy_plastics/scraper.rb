@@ -15,6 +15,5 @@ class HappyPlastics::Scraper
       plastic_facts = doc.css("div.listicle-slide-dek")
       fact = plastic_facts[plastic.num.to_i - 1].text
       HappyPlastics::Fact.new(fact, plastic)
-      # HappyPlastics::Fact.new(fact)
   end
 end
