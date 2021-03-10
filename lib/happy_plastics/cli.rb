@@ -1,7 +1,7 @@
 class HappyPlastics::CLI 
   def call 
     puts "\nWelcome to HappyPlastics!\n".colorize(:yellow)
-    puts "Where you learn about plastics and the world becomes".colorize(:yellow) + " greener.".colorize(:green) 
+    puts "Where you learn about plastics and the world becomes".colorize(:yellow) + " greener.".colorize(:green).bold 
     get_plastics
     list_plastics
     get_user_plastic
